@@ -6,7 +6,7 @@ wait(1)
 starterGUI:SetCore("SendNotification", {
 	Title = "Chris's Auto Parry",
 	Text = "Auto Parry Executed",
-	Duration = 10,
+	Duration = 1,
         Button1 = "OK"
 })
 
@@ -56,7 +56,7 @@ RunService.PreSimulation:Connect(function()
     local Speed = Ball.zoomies.VectorVelocity.Magnitude
     local Distance = (HRP.Position - Ball.Position).Magnitude
     
-    if Ball:GetAttribute("target") == Player.Name and not Parried and Distance / Speed <= 0.60 then
+    if Ball:GetAttribute("target") == Player.Name and not Parried and Distance / Speed <= 0.80 then
       VirtualInputManager:SendMouseButtonEvent(0, 0, 0, true, game, 0)
       Parried = true
       Cooldown = tick()
