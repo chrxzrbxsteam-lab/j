@@ -49,7 +49,7 @@ RunService.PreSimulation:Connect(function()
     local Speed = Ball.zoomies.VectorVelocity.Magnitude
     local Distance = (HRP.Position - Ball.Position).Magnitude
     
-    if Ball:GetAttribute("target") == Player.Name and not Parried and Distance / Speed <= 1.00 then
+    if Ball:GetAttribute("target") == Player.Name and not Parried and Distance / Speed <= 0.825 then
       VirtualInputManager:SendMouseButtonEvent(0, 0, 0, true, game, 0)
       Parried = true
       Cooldown = tick()
