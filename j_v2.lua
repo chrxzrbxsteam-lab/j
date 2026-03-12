@@ -3,13 +3,6 @@ local player = game.Players.LocalPlayer
 
 wait(1)
 
-starterGUI:SetCore("SendNotification", {
-	Title = "Chris's Auto Parry",
-	Text = "Auto Parry Executed",
-	Duration = 1,
-        Button1 = "OK"
-})
-
 getgenv().visualizer = false
 loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/RedCircleBlock"))()
 
